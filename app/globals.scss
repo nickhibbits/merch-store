@@ -1,0 +1,81 @@
+@use "@/styles/mixins/mediaQueries.scss";
+@use "@/styles/variables";
+
+// simple reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  color: variables.$clr-neutral-100;
+  overflow: hidden;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a,
+button {
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  border: none;
+}
+
+h1 {
+  font-size: variables.$fs-500;
+}
+
+.flex {
+  display: flex;
+
+  &_column {
+    flex-direction: column;
+  }
+
+  &_row {
+    flex-direction: row;
+  }
+
+  &_center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+.container {
+  position: relative;
+  height: 100dvh;
+  max-width: calc(100% - 3rem);
+  margin-inline: auto;
+
+  &_nav {
+    height: calc(100dvh - variables.$size-38);
+  }
+
+  @include mediaQueries.tablet {
+    max-width: calc(100% - 10rem);
+  }
+
+  @include mediaQueries.desktop {
+    max-width: calc(100% - 25rem);
+  }
+
+  @include mediaQueries.large-screen {
+    max-width: calc(100% - 35rem);
+  }
+}
