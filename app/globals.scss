@@ -1,7 +1,6 @@
-@use "@/styles/mixins/mediaQueries.scss";
-@use "@/styles/variables";
+@use "@/styles/variables.scss";
 
-// simple reset
+// reset
 *,
 *::before,
 *::after {
@@ -34,48 +33,4 @@ button {
 
 h1 {
   font-size: variables.$fs-500;
-}
-
-.flex {
-  display: flex;
-
-  &_column {
-    flex-direction: column;
-  }
-
-  &_row {
-    flex-direction: row;
-  }
-
-  &_center {
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.grid {
-  display: grid;
-}
-
-.container {
-  position: relative;
-  height: 100dvh;
-  max-width: calc(100% - 3rem);
-  margin-inline: auto;
-
-  &_nav {
-    height: calc(100dvh - variables.$size-38);
-  }
-
-  @include mediaQueries.tablet {
-    max-width: calc(100% - 10rem);
-  }
-
-  @include mediaQueries.desktop {
-    max-width: calc(100% - 25rem);
-  }
-
-  @include mediaQueries.large-screen {
-    max-width: calc(100% - 35rem);
-  }
 }

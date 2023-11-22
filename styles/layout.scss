@@ -1,0 +1,51 @@
+@use "@/styles/mixins/mediaQueries.scss";
+@use "@/styles/variables.scss";
+
+.flex {
+  display: flex;
+
+  &_column {
+    flex-direction: column;
+  }
+
+  &_row {
+    flex-direction: row;
+  }
+
+  &_center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+.layout_container {
+  height: 100dvh;
+  width: 100%;
+}
+
+.page_container {
+  position: relative;
+  height: calc(100dvh - variables.$size-38);
+  max-width: calc(100% - 3rem);
+  margin-inline: auto;
+
+  &_nav {
+    height: calc(100dvh - variables.$size-38);
+  }
+
+  @include mediaQueries.tablet {
+    max-width: calc(100% - 10rem);
+  }
+
+  @include mediaQueries.desktop {
+    max-width: calc(100% - 25rem);
+  }
+
+  @include mediaQueries.large-screen {
+    max-width: calc(100% - 35rem);
+  }
+}
