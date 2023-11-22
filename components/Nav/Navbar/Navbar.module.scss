@@ -1,0 +1,13 @@
+.navbar {
+  border-bottom: solid 2px red;
+  padding: 1rem 3rem;
+
+  &_container {
+    justify-content: space-between;
+  }
+
+  &_menu {
+    width: 30rem;
+    justify-content: space-between;
+  }
+}
