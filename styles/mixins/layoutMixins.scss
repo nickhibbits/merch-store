@@ -1,0 +1,18 @@
+@use "./mediaQueries.scss";
+
+@mixin page_width {
+  width: calc(100% - 3rem);
+  margin-inline: auto;
+
+  @include mediaQueries.tablet {
+    width: calc(100% - 10rem);
+  }
+
+  @include mediaQueries.desktop {
+    width: calc(100% - 25rem);
+  }
+
+  @include mediaQueries.large-screen {
+    width: calc(100% - 35rem);
+  }
+}
