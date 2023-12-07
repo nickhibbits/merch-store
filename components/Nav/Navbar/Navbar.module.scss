@@ -1,13 +1,16 @@
+@use "@/styles/mixins/layoutMixins.scss";
+
 .navbar {
   border-bottom: solid 2px red;
-  padding: 1rem 3rem;
+  padding: 1rem 0;
 
   &_container {
+    @include layoutMixins.page_width;
     justify-content: space-between;
   }
 
   &_menu {
-    width: 30rem;
+    width: min(30rem, 60%);
     justify-content: space-between;
   }
 }
