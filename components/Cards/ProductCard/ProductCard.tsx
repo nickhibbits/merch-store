@@ -1,7 +1,7 @@
 import styles from "./ProductCard.module.scss";
 
-function ProdcutCard() {
+function ProductCard() {
   return <div className={styles.product_card_wrapper}></div>;
 }
 
-export default ProdcutCard;
+export default ProductCard;
