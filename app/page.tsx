@@ -5,6 +5,8 @@ import SpecialsPanel from "@/components/Panels/SpecialsPanel/SpecialsPanel";
 
 import "@/styles/layout.scss";
 
+import { products } from "@/data/dummy";
+
 export default function Home() {
   return (
     <main className="page_container grid_page_container">
@@ -14,42 +16,26 @@ export default function Home() {
       </section>
       <section className="product_card_wrapper">
         <ul className="product_card_list">
-          <li className="product_card">
-            <ProductCard />
-          </li>
-          <li className="product_card">
-            <ProductCard />
-          </li>
-          <li className="product_card">
-            <ProductCard />
-          </li>
-          <li className="product_card">
-            <ProductCard />
-          </li>
-          <li className="product_card">
-            <ProductCard />
-          </li>
+          {products.map((product) => {
+            return (
+              <li className="product_card" key={product.productId}>
+                <ProductCard />
+              </li>
+            );
+          })}
         </ul>
       </section>
       <section className="specials_wrapper">
         <SpecialsPanel />
         <div className="product_card_wrapper">
           <ul className="product_card_list">
-            <li className="product_card">
-              <ProductCard />
-            </li>
-            <li className="product_card">
-              <ProductCard />
-            </li>
-            <li className="product_card">
-              <ProductCard />
-            </li>
-            <li className="product_card">
-              <ProductCard />
-            </li>
-            <li className="product_card">
-              <ProductCard />
-            </li>
+            {products.map((product) => {
+              return (
+                <li className="product_card" key={product.productId}>
+                  <ProductCard />
+                </li>
+              );
+            })}
           </ul>
         </div>
       </section>

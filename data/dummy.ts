@@ -7,6 +7,7 @@ const products: Product[] = [
     stockQuantity: 50,
     categoryId: 1,
     imageRef: "mens_tshirt.jpg",
+    discount: false,
   },
   {
     productId: 2,
@@ -16,6 +17,7 @@ const products: Product[] = [
     stockQuantity: 40,
     categoryId: 2,
     imageRef: "womens_jeans.jpg",
+    discount: false,
   },
   {
     productId: 3,
@@ -25,6 +27,7 @@ const products: Product[] = [
     stockQuantity: 30,
     categoryId: 1,
     imageRef: "mens_formal_shirt.jpg",
+    discount: false,
   },
   {
     productId: 4,
@@ -34,6 +37,7 @@ const products: Product[] = [
     stockQuantity: 25,
     categoryId: 2,
     imageRef: "womens_summer_dress.jpg",
+    discount: "30%",
   },
   {
     productId: 5,
@@ -43,6 +47,7 @@ const products: Product[] = [
     stockQuantity: 40,
     categoryId: 1,
     imageRef: "mens_jeans.jpg",
+    discount: "15%",
   },
   {
     productId: 6,
@@ -52,6 +57,7 @@ const products: Product[] = [
     stockQuantity: 35,
     categoryId: 2,
     imageRef: "womens_blouse.jpg",
+    discount: false,
   },
   {
     productId: 7,
@@ -61,6 +67,7 @@ const products: Product[] = [
     stockQuantity: 20,
     categoryId: 1,
     imageRef: "mens_jacket.jpg",
+    discount: false,
   },
   {
     productId: 8,
@@ -70,6 +77,7 @@ const products: Product[] = [
     stockQuantity: 30,
     categoryId: 2,
     imageRef: "womens_skirt.jpg",
+    discount: false,
   },
   {
     productId: 9,
@@ -79,6 +87,7 @@ const products: Product[] = [
     stockQuantity: 45,
     categoryId: 1,
     imageRef: "mens_shorts.jpg",
+    discount: false,
   },
   {
     productId: 10,
@@ -88,6 +97,7 @@ const products: Product[] = [
     stockQuantity: 50,
     categoryId: 2,
     imageRef: "womens_tshirt.jpg",
+    discount: "20%",
   },
 ];
 
@@ -147,3 +157,5 @@ const reviews: Review[] = [
     date: new Date("2023-11-27"),
   },
 ];
+
+export { products, categories, inventory, reviews };

@@ -6,6 +6,7 @@ type Product = {
   stockQuantity: number;
   categoryId: number; // Foreign key reference to Category
   imageRef: string;
+  discount: boolean | string;
 };
 
 type Category = {
