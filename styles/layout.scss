@@ -24,20 +24,17 @@
 
   &_page_container {
     @include layoutMixins.page_grid_columns;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 100dvh repeat(20rem, 2);
   }
 }
 
 .window_container {
-  width: 100%;
+  height: 100vh;
+  overflow: scroll;
 }
 
 .page_container {
-  position: relative;
-  height: calc(100dvh - variables.$size-38);
   background-color: darkgreen;
-  padding-inline: auto;
-
   @include layoutMixins.page_width;
 }
 
@@ -48,7 +45,7 @@
 }
 
 .product_card_wrapper {
-  min-height: 18rem;
+  height: 18rem;
   outline: 2px solid blue;
 }
 
@@ -57,5 +54,6 @@
 }
 
 .footer {
-  min-height: 25rem;
+  min-height: 20rem;
+  @include layoutMixins.page_width;
 }
