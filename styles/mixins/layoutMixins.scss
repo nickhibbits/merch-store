@@ -16,3 +16,19 @@
     width: calc(100% - 35rem);
   }
 }
+
+@mixin page_grid_columns {
+  grid-template-columns: 1fr;
+
+  @include mediaQueries.tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mediaQueries.desktop {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  @include mediaQueries.large-screen {
+    grid-template-columns: repeat(16, 1fr);
+  }
+}

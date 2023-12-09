@@ -6,15 +6,17 @@ import SpecialsPanel from "@/components/Panels/SpecialsPanel/SpecialsPanel";
 import "@/styles/layout.scss";
 
 import { products } from "@/data/dummy";
+import "@/styles/layout.scss";
 
 export default function Home() {
   return (
-    <main className="page_container grid_page_container">
-      <section className="feature_wrapper">
+    <main className="page_container grid grid_page_container">
+      <section className="feature_wrapper grid">
         <FeaturePanelPrimary />
         <FeaturePanelSecondary />
       </section>
       <section className="product_card_wrapper">
+        <h2>Hot Items</h2>
         <ul className="product_card_list">
           {products.map((product) => {
             return (
@@ -27,17 +29,15 @@ export default function Home() {
       </section>
       <section className="specials_wrapper">
         <SpecialsPanel />
-        <div className="product_card_wrapper">
-          <ul className="product_card_list">
-            {products.map((product) => {
-              return (
-                <li className="product_card" key={product.productId}>
-                  <ProductCard />
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <ul className="product_card_list">
+          {products.map((product) => {
+            return (
+              <li className="product_card" key={product.productId}>
+                <ProductCard />
+              </li>
+            );
+          })}
+        </ul>
       </section>
     </main>
   );

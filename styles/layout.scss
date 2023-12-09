@@ -23,36 +23,39 @@
   display: grid;
 
   &_page_container {
-    grid-template-columns: 1fr;
-
-    @include mediaQueries.tablet {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include mediaQueries.desktop {
-      grid-template-columns: repeat(12, 1fr);
-    }
-
-    @include mediaQueries.large-screen {
-      grid-template-columns: repeat(16, 1fr);
-    }
+    @include layoutMixins.page_grid_columns;
+    grid-template-rows: repeat(3, 1fr);
   }
 }
 
 .window_container {
-  height: 100dvh;
   width: 100%;
 }
 
 .page_container {
   position: relative;
   height: calc(100dvh - variables.$size-38);
-  background-color: lightgreen;
+  background-color: darkgreen;
   padding-inline: auto;
 
-  // &_nav {
-  //   height: calc(100dvh - variables.$size-38);
-  // }
-
   @include layoutMixins.page_width;
+}
+
+.feature_wrapper {
+  outline: 2px solid white;
+  @include layoutMixins.page_grid_columns;
+  grid-template-rows: 60dvh 40dvh;
+}
+
+.product_card_wrapper {
+  min-height: 18rem;
+  outline: 2px solid blue;
+}
+
+.specials_wrapper {
+  min-height: 18rem;
+}
+
+.footer {
+  min-height: 25rem;
 }
