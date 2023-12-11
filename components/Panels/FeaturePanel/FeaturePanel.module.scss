@@ -1,0 +1,12 @@
+@use "@/styles/mixins/mediaQueries.scss";
+
+.feature_panel_primary {
+  background-color: red;
+
+  @include mediaQueries.tablet {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+}
+
+// .feature_panel_secondary {
+// }

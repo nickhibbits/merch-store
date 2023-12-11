@@ -38,12 +38,13 @@
 }
 
 .page_container {
-  background-color: darkgreen;
+  // background-color: darkgreen;
+  outline: 2px solid white;
   @include layoutMixins.page_width;
 }
 
 .feature_wrapper {
-  outline: 2px solid white;
+  background-color: rgb(1, 1, 174);
   @include layoutMixins.page_grid_columns;
   grid-template-rows: 60dvh 40dvh;
 
@@ -58,12 +59,17 @@
 }
 
 .product_card_wrapper {
-  height: 18rem;
-  outline: 2px solid blue;
+  background: purple;
+  @include mediaQueries.tablet {
+    grid-area: 2 / 1 / 3 / 3;
+  }
 }
 
 .specials_wrapper {
-  min-height: 18rem;
+  background: orange;
+  @include mediaQueries.tablet {
+    grid-area: 3 / 1 / 4 / 3;
+  }
 }
 
 .footer {
