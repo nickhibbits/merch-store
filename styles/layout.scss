@@ -26,7 +26,7 @@
     @include layoutMixins.page_grid_columns;
     grid-template-rows: 100dvh repeat(2, 20rem);
 
-    @include mediaQueries.desktop {
+    @include mediaQueries.large-tablet {
       grid-template-rows: 100dvh 35rem repeat(2, 20rem);
     }
   }
@@ -48,11 +48,11 @@
   @include layoutMixins.page_grid_columns;
   grid-template-rows: 60dvh 40dvh;
 
-  @include mediaQueries.tablet {
+  @include mediaQueries.medium-screen {
     grid-area: 1 / 1 / 2 / 3;
   }
 
-  @include mediaQueries.desktop {
+  @include mediaQueries.large-tablet {
     grid-template-rows: repeat(2, 50dvh);
     grid-area: 1 / 1 / 2 / 13;
   }
@@ -60,14 +60,14 @@
 
 .product_card_wrapper {
   background: purple;
-  @include mediaQueries.tablet {
+  @include mediaQueries.medium-screen {
     grid-area: 2 / 1 / 3 / 3;
   }
 }
 
 .specials_wrapper {
   background: orange;
-  @include mediaQueries.tablet {
+  @include mediaQueries.medium-screen {
     grid-area: 3 / 1 / 4 / 3;
   }
 }

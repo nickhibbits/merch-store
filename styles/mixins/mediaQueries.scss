@@ -1,25 +1,40 @@
-$font-base: 16px; // Base font size in pixels
-$tablet: 720px;
-$desktop: 1110px;
-$large-screen: 1600px;
+$small-screen: 480px;
+$medium-screen: 768px;
+$large-tablet: 1024px;
+$small-desktop: 1280px;
+$extra-large-screen: 1920px;
 
-// Tablet media query (769px to 1024px)
-@mixin tablet {
-  @media (min-width: $tablet) {
+// Small screen media query (320px to 480px)
+@mixin small-screen {
+  @media (min-width: $small-screen) {
     @content;
   }
 }
 
-// Desktop media query (1025px to 1366px)
-@mixin desktop {
-  @media (min-width: $desktop) {
+// Medium screen media query (481px to 768px)
+@mixin medium-screen {
+  @media (min-width: $medium-screen) {
     @content;
   }
 }
 
-// Large screen media query (1367px and above)
-@mixin large-screen {
-  @media (min-width: $large-screen) {
+// Large tablet media query (769px to 1024px)
+@mixin large-tablet {
+  @media (min-width: $large-tablet) {
+    @content;
+  }
+}
+
+// Small desktop media query (1025px to 1280px)
+@mixin small-desktop {
+  @media (min-width: $small-desktop) {
+    @content;
+  }
+}
+
+// Extra large screen media query (1281px and above)
+@mixin extra-large-screen {
+  @media (min-width: $extra-large-screen) {
     @content;
   }
 }
