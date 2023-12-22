@@ -27,11 +27,11 @@
     grid-template-rows: 100dvh repeat(2, 20rem);
 
     @include mediaQueries.large-tablet {
-      grid-template-rows: 100dvh 35rem repeat(2, 20rem);
+      grid-template-rows: 100dvh 35rem 25rem;
     }
 
     @include mediaQueries.small-desktop {
-      grid-template-rows: 80dvh 35rem repeat(2, 20rem);
+      grid-template-rows: 80dvh 35rem 25rem;
     }
   }
 }
@@ -63,6 +63,11 @@
     grid-template-rows: repeat(2, 40dvh);
     grid-area: 1 / 1 / 2 / 13;
   }
+
+  @include mediaQueries.extra-large-screen {
+    grid-template-rows: repeat(2, 40dvh);
+    grid-area: 1 / 1 / 2 / 17;
+  }
 }
 
 .product_card_wrapper {
@@ -70,12 +75,34 @@
   @include mediaQueries.medium-screen {
     grid-area: 2 / 1 / 3 / 3;
   }
+
+  @include mediaQueries.small-desktop {
+    grid-area: 2 / 1 / 3 / 13;
+  }
+
+  @include mediaQueries.extra-large-screen {
+    grid-area: 2 / 1 / 3 / 17;
+  }
 }
 
 .specials_wrapper {
   background: orange;
+
+  @include mediaQueries.large-tablet {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+
   @include mediaQueries.medium-screen {
     grid-area: 3 / 1 / 4 / 3;
+  }
+
+  @include mediaQueries.small-desktop {
+    grid-area: 3 / 1 / 3 / 13;
+  }
+
+  @include mediaQueries.extra-large-screen {
+    grid-template-rows: repeat(2, 40dvh);
+    grid-area: 3 / 1 / 3 / 17;
   }
 }
 
