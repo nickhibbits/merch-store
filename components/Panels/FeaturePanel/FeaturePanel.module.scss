@@ -6,6 +6,22 @@
   @include mediaQueries.medium-screen {
     grid-area: 1 / 1 / 2 / 3;
   }
+
+  @include mediaQueries.small-desktop {
+    grid-area: 1 / 1 / 3 / 9;
+  }
+}
+
+.feature_panel_secondary {
+  background-color: rgb(1, 1, 174);
+
+  @include mediaQueries.medium-screen {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  @include mediaQueries.small-desktop {
+    grid-area: 1 / 9 / 3 / 13;
+  }
 }
 
 // .feature_panel_secondary {

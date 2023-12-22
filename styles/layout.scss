@@ -29,6 +29,10 @@
     @include mediaQueries.large-tablet {
       grid-template-rows: 100dvh 35rem repeat(2, 20rem);
     }
+
+    @include mediaQueries.small-desktop {
+      grid-template-rows: 80dvh 35rem repeat(2, 20rem);
+    }
   }
 }
 
@@ -38,13 +42,11 @@
 }
 
 .page_container {
-  // background-color: darkgreen;
   outline: 2px solid white;
   @include layoutMixins.page_width;
 }
 
 .feature_wrapper {
-  background-color: rgb(1, 1, 174);
   @include layoutMixins.page_grid_columns;
   grid-template-rows: 60dvh 40dvh;
 
@@ -53,7 +55,12 @@
   }
 
   @include mediaQueries.large-tablet {
-    grid-template-rows: repeat(2, 50dvh);
+    // grid-template-rows: repeat(2, 50dvh);
+    grid-area: 1 / 1 / 2 / 13;
+  }
+
+  @include mediaQueries.small-desktop {
+    grid-template-rows: repeat(2, 40dvh);
     grid-area: 1 / 1 / 2 / 13;
   }
 }
