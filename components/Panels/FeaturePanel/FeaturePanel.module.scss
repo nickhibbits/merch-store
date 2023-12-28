@@ -1,8 +1,6 @@
 @use "@/styles/mixins/mediaQueries.scss";
 
 .feature_panel_primary {
-  background-color: red;
-
   @include mediaQueries.medium-screen {
     grid-area: 1 / 1 / 2 / 3;
   }
