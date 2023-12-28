@@ -5,14 +5,20 @@ import styles from "./BackgroundImageContainer.module.scss";
 interface BackgroundImageContainerProps {
   imageSrc: any;
   children: ReactNode;
+  bgPosition: {
+    first: string;
+    second: string;
+  };
 }
 
 function BackgroundImageContainer({
   imageSrc,
+  bgPosition,
   children,
 }: BackgroundImageContainerProps) {
   const containerStyle = {
     backgroundImage: `url(${imageSrc})`,
+    backgroundPosition: `${bgPosition.first} ${bgPosition.second}`,
   };
 
   return (
