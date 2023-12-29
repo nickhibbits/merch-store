@@ -1,5 +1,4 @@
 @use "@/styles/mixins/mediaQueries.scss";
-@use "@/styles/mixins/images.scss";
 
 .feature_panel_primary {
   @include mediaQueries.medium-screen {
@@ -28,6 +27,3 @@
     grid-area: 1 / 12 / 3 / 18;
   }
 }
-
-// .feature_panel_secondary {
-// }

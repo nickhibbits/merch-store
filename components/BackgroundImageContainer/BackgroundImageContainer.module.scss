@@ -1,5 +1,3 @@
-@use "@/styles/mixins/images.scss";
-
 .container {
   height: 100%;
   position: relative;
@@ -7,11 +5,10 @@
 
 .bgImage {
   z-index: 0;
-  @include images.background_image;
 }
 
 .text_wrapper {
   border: 2px solid orange;
-  position: relative;
+  position: absolute;
   z-index: 1;
 }
