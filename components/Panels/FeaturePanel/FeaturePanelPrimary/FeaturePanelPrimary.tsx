@@ -1,14 +1,14 @@
 import BackgroundImageContainer from "@/components/BackgroundImageContainer/BackgroundImageContainer";
 import styles from "@/components/Panels/FeaturePanel/FeaturePanel.module.scss";
-import model1 from "@/public/images/model_1.jpg";
+import model2 from "@/public/images/model_3.jpg";
 
 function FeaturePanelPrimary() {
   return (
     <div className={styles.feature_panel_primary}>
       <BackgroundImageContainer
-        alt="model with a fierce, poised presence"
-        imageSrc={model1.src}
-        bgPosition={["top", "center"]}
+        alt="young woman wearing sunglasses looking at phone"
+        imageSrc={model2.src}
+        bgPosition={["50%", "20%"]}
       >
         <h1>Heyo</h1>
       </BackgroundImageContainer>
