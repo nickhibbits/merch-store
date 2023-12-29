@@ -1,5 +1,17 @@
 @use "@/styles/mixins/images.scss";
 
 .container {
+  border: 2px solid lightblue;
+  height: 100%;
+  position: relative;
+}
+
+.bgImage {
+  z-index: 0;
   @include images.background_image;
+}
+
+.text_wrapper {
+  position: relative;
+  z-index: 1;
 }

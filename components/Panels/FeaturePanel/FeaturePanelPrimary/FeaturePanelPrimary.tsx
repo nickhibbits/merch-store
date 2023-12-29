@@ -6,8 +6,9 @@ function FeaturePanelPrimary() {
   return (
     <div className={styles.feature_panel_primary}>
       <BackgroundImageContainer
+        alt="model with a fierce, poised presence"
         imageSrc={model1.src}
-        bgPosition={{ first: "center", second: "center" }}
+        bgPosition={["top", "center"]}
       >
         <h1>Heyo</h1>
       </BackgroundImageContainer>
